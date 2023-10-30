@@ -31,3 +31,9 @@ def handle_uploaded_file(f):
             deposit_Lost = row['deposit_Lost'],
             # Map other columns from the CSV to your model fields
         )
+
+
+def visualize_data(request):
+    data = lostdeposit.objects.all()  # Fetch the data from the database
+    context = {'data': data}
+    return render(request, 'visualize.html', context)

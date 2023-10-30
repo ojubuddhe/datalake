@@ -1,0 +1,224 @@
+{% extends 'hello/base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<!-- Specific content for the homepage -->
+
+
+
+<!--/banner-slider-->
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="container">
+						<div class="carousel-caption">
+
+							<h3>Karnataka Election data</h3>
+							<p>Get electoral data at the tip of your fingers</p>
+							<div class="button-4 mx-auto">
+								<div class="eff-4"></div>
+								<a href="services.html"> Download Dataset</a>
+							  </div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item item2">
+					<div class="container">
+						<div class="carousel-caption">
+							<h3>One class can
+								change everything.</h3>
+							<p>We believe that every student is unique</p>
+							<div class="button-4 mx-auto">
+								<div class="eff-4"></div>
+								<a href="services.html"> View Courses</a>
+							  </div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item item3">
+					<div class="container">
+						<div class="carousel-caption">
+							<h3>Karnataka Election data</h3>
+							<p>Get electoral data at the tip of your fingers</p>
+							<div class="button-4 mx-auto">
+								<div class="eff-4"></div>
+								<a href="services.html"> Download Data</a>
+							  </div>
+						</div>
+					</div>
+				</div>
+				 <div class="carousel-item item4">
+					<div class="container">
+						<div class="carousel-caption">
+							<h3>Better learning
+								for better results.</h3>
+							<p>We believe that every student is unique</p>
+							<div class="button-4 mx-auto">
+								<div class="eff-4"></div>
+								<a href="services.html"> View Courses</a>
+							  </div>
+						</div>
+					</div>
+				</div> -->
+<!-- </div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div> -->
+
+
+<!--//banner-slider-->
+<section class="w3-gallery">
+    <div class="porfolio-inf py-5">
+        <div class="container pt-lg-5 pb-lg-4">
+            <div class="row title-content">
+                <div class="col-lg-4 title-left">
+                    <h3 class="hny-title">Karnataka Election Data</h3>
+                </div>
+                <div class="col-lg-8 title-info">
+                    <p>The state of Karnataka is a crucial political state in the south. It has seen repeated swings
+                        between the BJP and the
+                        Indian National Congress over the past few election cycles, and contributes 28 parliamentary
+                        seats to the national
+                        assembly.
+                    <p> In this data we explore the various details of the Karnataka elections, from participation of
+                        women to the number of
+                        candidates who lost their deposits. </p>
+                    </p>
+                </div>
+            </div>
+            <div class="port-text-cards text-left mt-5 mb-3">
+                <button class="btn filter-button" data-filter="Karnataka-elections">Karnataka Elections</button>
+                <button class="btn filter-button" data-filter="related-data">Other Related Data</button>
+
+            </div>
+            <br />
+
+            <div class="row">
+                <div class="col-md-3 filter related-data">
+                    <div class="each-item">
+                        <a href="https://tcpd.ashoka.edu.in/lok-dhaba/"><img class="port-image img-fuild"
+                                src="{%static 'hello/images/p1.jpg' %}" alt="" /></a>
+
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <h6><a class="course-instructor" href="#">Trivedi Centre for Political Data</a></h6>
+                            <a href="#" class="course-titlegulp-wrapper">
+                                <h3 class="course-title" data-gal="prettyPhoto[gallery]">LokDhaba dataset</h3>
+                            </a>
+                            <!-- </div>
+    						<div class="course-divider">
+    							<div class="course-meta grid"><span class="course-students" title=""><span
+    										class="fa fa-user" aria-hidden="true"></span> 46</span>
+    								<span class="course-reviews" title=""><span class="fa fa-thumbs-o-up"
+    										aria-hidden="true"></span> 14</span>
+    
+    							</div> -->
+                            <a href="https://tcpd.ashoka.edu.in/lok-dhaba/">
+                                <button class="price-course btn"> Show me </button></a>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 filter Karnataka-elections">
+                    <div class="each-item">
+                        <a href="#"><img class="port-image img-fuild" src="{%static 'hello/images/karnataka.jpg' %}"
+                                alt="" /></a>
+
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <h6><a class="course-instructor" href="#">Trivedi Centre for Political Data</a></h6>
+                            <a href="#" class="course-title-wrapper">
+                                <h3 class="course-title" data-gal="prettyPhoto[gallery]">Karnataka Election data
+                                </h3>
+                            </a>
+                        </div>
+                        <div class="course-divider">
+                            <!-- <div class="course-meta grid"><span class="course-students" title=""><span
+    										class="fa fa-user" aria-hidden="true"></span> 26</span>
+    								<span class="course-reviews" title=""><span class="fa fa-thumbs-o-up"
+    										aria-hidden="true"></span> 24</span>
+    
+    							</div> -->
+                            <!-- <a href="{% url '' %}">
+                                    <button class="price-course btn"> Visualise! </button></a> -->
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 filter webdesign">
+                    <div class="each-item">
+                        <a href="#"><img class="port-image img-fuild" src="{%static 'hello/images/p3.jpg' %}"
+                                alt="" /></a>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-info">
+                            <h6><a class="course-instructor" href="#">Christina Rose</a></h6>
+                            <a href="#" class="course-title-wrapper">
+                                <h3 class="course-title" data-gal="prettyPhoto[gallery]">Interior Design</h3>
+                            </a>
+                        </div>
+                        <div class="course-divider">
+                            <div class="course-meta grid"><span class="course-students" title=""><span
+                                        class="fa fa-user" aria-hidden="true"></span> 36</span>
+                                <span class="course-reviews" title=""><span class="fa fa-thumbs-o-up"
+                                        aria-hidden="true"></span> 34</span>
+
+                            </div>
+                            <button class="price-course btn"> $300 </button>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- //gallery container -->
+    </div>
+</section>
+
+
+
+<!-- </div>
+<div class="content-info-in row mt-md-5 mt-4">
+    <div class="col-lg-3 col-md-6 imghrs">
+        <a class="imghr" href="#"><img src="{%static 'hello/images/ppd.jpg' %}" class="img-fluid" alt="">
+            <div class="details"><span class="title">Founding Director</span><span class="info">Professor Partha Prathim
+                    Das</span></div>
+        </a>
+    </div>
+    <div class="col-lg-3 col-md-6 imghrs">
+        <a class="imghr" href="#"><img src="{%static 'hello/images/maya.jpg' %}" class="img-fluid" alt="">
+            <div class="details"><span class="title"> Project Director</span><span class="info">Professor Maya
+                    Ramnath</span></div>
+        </a>
+    </div>
+    <div class="col-lg-3 col-md-6 imghrs">
+        <a class="imghr" href="#"><img src="{%static 'hello/images/puneet.jpg' %}" class="img-fluid" alt="">
+            <div class="details"><span class="title">Software Engineer</span><span class="info">Puneet Arya</span></div>
+        </a>
+    </div> -->
+{% endblock %}
