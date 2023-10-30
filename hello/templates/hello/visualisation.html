@@ -1,0 +1,53 @@
+<!-- visualisation.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Deposit Lost Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <canvas id="depositLostChart" width="800" height="400"></canvas>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const data = JSON.parse('{{ data | safe }}');
+
+            // Prepare data for the bar plot
+            const year = [];
+            const deposit_Lost = [];
+
+            // Extracting data for visualization
+            data.forEach(item => {
+                year.push(item.year);
+                deposit_Lost.push(item.deposit_Lost);
+            });
+
+            // Chart creation
+            var depositLostChart = new Chart(document.getElementById('depositLostChart'), {
+                type: 'bar',
+                data: {
+                    labels: year,
+                    datasets: [{
+                        label: 'Deposit Lost per Year',
+                        data: deposit_Lost,
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -30,7 +30,12 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+
+SITE_ID = 2 # adding this according to the following tutorial for google authentication https://www.youtube.com/watch?v=yO6PP0vEOMc
+
 INSTALLED_APPS = [
+    
+    'visualisation',
     'hello',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +43,24 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth', 
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google'
+
 ]
+
+SOCIALACCOUNT_PROVIDERS = {
+    "google":{
+        "SCOPE" : [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {"access_type" : "online"}
+
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -48,6 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'datalake.urls'
@@ -123,3 +146,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+# adding this according to the following tutorial for google authentication https://www.youtube.com/watch?v=yO6PP0vEOMc
+
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend"
+)
+
+LOGIN_REDIRECT_URL = "/" 
+LOGOOUT_REDIRECT_URL = "/"

@@ -21,3 +21,11 @@ class User(models.Model):
 
     def __str__(self):
         return f"{self.firstname} {self.lastname} {self.profile}"
+    
+
+class lostdeposit(models.Model):
+    stateName = models.CharField(max_length=100)
+    assemblyNumber = models.IntegerField(max_length=100)
+    year = models.IntegerField()
+    total_Candidates = models.IntegerField()
+    deposit_Lost = models.IntegerField()
